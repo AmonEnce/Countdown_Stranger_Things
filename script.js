@@ -17,11 +17,12 @@ var segundos = document.getElementById('segundos');
     var qtdHoras = Math.floor((tempoRestante() % (60 * 60 * 24)) / (60 * 60));
     var qtdDias = Math.floor(tempoRestante() / (60 * 60 * 24));
 
+if(qtdSegundos > 0){
     segundos.textContent = formatarDigito(qtdSegundos);
     minutos.textContent = formatarDigito(qtdMinutos);
     horas.textContent = formatarDigito(qtdHoras);
     dias.textContent = formatarDigito(qtdDias);
-
+}
 
 const atualizar = (tempo)=>{
      segundos = document.getElementById('segundos');
